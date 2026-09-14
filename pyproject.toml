@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "convoy-raft"
+version = "1.0.0"
+description = "Raft consensus with a deterministic chaos simulator and a replicated key-value store. No dependencies."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-timeout>=2.3"]
+
+[project.scripts]
+convoy = "convoy.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["convoy*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --timeout=300"
