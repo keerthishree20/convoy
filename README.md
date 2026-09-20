@@ -1,5 +1,7 @@
 # Convoy
 
+[![tests](https://github.com/keerthishree20/convoy/actions/workflows/tests.yml/badge.svg)](https://github.com/keerthishree20/convoy/actions/workflows/tests.yml)
+
 Raft consensus in Python, with a deterministic chaos simulator that checks
 Raft's safety properties after every message, and a replicated key-value store
 that runs as real processes. No dependencies.
